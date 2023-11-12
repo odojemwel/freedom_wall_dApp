@@ -71,7 +71,7 @@ const NotesList = () => {
 
   return (
     <div className=" relative flex justify-center h-full">
-      <div className="flex flex-row flex-1 h-full space-x-2">
+      {anchorWallet ? <div className="flex flex-row flex-1 h-full space-x-2">
         <div className="flex-1 p-8 flex space-x-16 mx-4">
           <motion.div className="flex-1 space-y-8">
             {
@@ -92,6 +92,11 @@ const NotesList = () => {
         </div>
 
       </div>
+        :
+        <div className="flex justify-center flex-1 w-full my-8">
+          <div className="text-4xl font-bold text-white">Please connect your wallet to get started.</div>
+        </div>
+      }
       <div className="fixed p-4 w-[50%] bg-gray-600 bg-opacity-50 border bottom-8 rounded-xl">
         <Input placeholder="Post a freedom wall note"
           className=" bg-white"
