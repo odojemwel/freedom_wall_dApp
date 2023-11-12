@@ -64,10 +64,11 @@ const CreatePost = ({ addModalOpen, setAddModalOpen, post }: CreatePostProps) =>
         backdropFilter='blur(10px)' />
       <ModalContent className="bg-violet-950 rounded-3xl p-4"
         minWidth="50%" minHeight="50%">
-        <ModalHeader className="text-center w-full">Create your post to the wall.
-          It&apos;s free because it&apos;s a freedom wall🙂
+        <ModalHeader className="text-center w-full">Create your post to the wall. It&apos;s a freedom wall🙂
           <br />
           But it&apos;s costs a few lamports🤑 to post😉
+          <br />
+          <p className="text-sm">Make sure you are connected to your wallet.</p>
         </ModalHeader>
         <ModalBody>
           <div className="flex-col space-y-4">

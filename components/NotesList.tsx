@@ -60,11 +60,10 @@ const NotesList = () => {
     if (program) {
       setTimeout(async () => {
         const posts = await program.account.post.all()
-        const cleanPost = posts.map(post => {
+        const parsedPosts = posts.map(post => {
           return post.account as FreedomWallPost
         })
-        console.log("posts", cleanPost)
-        setPosts(cleanPost)
+        setPosts(parsedPosts)
       }, 2000);
     }
   }
